@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16456.057,133.66331,16402.332};
-		dir[]={-0.44248343,-0.66490728,0.60181534};
-		up[]={-0.39386556,0.74692267,0.53568965};
-		aside[]={0.80569506,-1.4230609e-006,0.5923894};
+		pos[]={16413.195,36.107445,16511.607};
+		dir[]={0.28282216,-0.41781652,-0.86345267};
+		up[]={0.13006203,0.90851122,-0.39707503};
+		aside[]={-0.95036298,-3.0487718e-007,-0.31129372};
 	};
 };
 binarizationWanted=0;
@@ -98,10 +98,12 @@ class AddonsMetaData
 randomSeed=3989762;
 class ScenarioData
 {
+	author="YourName";
+	overviewText="RATIO X:X [Description of your mission, this will be shown once the admin is picking the next mission to be played]";
+	overViewPicture="resources\loadscreen.jpg";
 	respawn=1;
 	class Header
 	{
-		gameType="Coop";
 		minPlayers=1;
 		maxPlayers=99;
 	};
@@ -154,6 +156,8 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="TVT/CO/MISC XX Framework v1";
+		overviewText="RATIO X:X [Short description here, will be shown once in slotting screen]";
 		resistanceWest=0;
 		timeOfChanges=3859.3269;
 		startWeather=0.19501862;

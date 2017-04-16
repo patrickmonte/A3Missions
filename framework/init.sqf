@@ -22,46 +22,26 @@ afi_jip_time = 300; 		// Time in which JIP is allowed to server. Number in secon
 
 enableSaving [ false, false ];
 
-/*//Execute scripts like this so they are properly ran only on server, not on clients.
-if (isServer) then {
-[] execvm "reinforcementopfor.sqf";
-[] execvm "extract\init.sqf";
-[] execvm "extract.sqf";
-execvm "moveukot.sqf";
-};
-*/
+	////////////
++   //SERVER////
++   ////////////
++if (isServer) then
++{
++
++
++};
 
-//NON-JIP
-if (!isNull player) then 
+	////////////
++	//PLAYERS///
++	///////////
+if (hasInterface) then 
 {
 	[]execvm "scripts\start_text\init.sqf";
 	nul= ["AreaOfOperations"]execvm "scripts\coverMap\coverMap.sqf";
-
-	if (hasInterface) then 
+	[] call compile preprocessFileLineNumbers "briefing.sqf";
+	if (side player == WEST) then //Hides the markers named below so blufor can't see it on map. Edit the WEST for intended case. EAST=Opfor/RESISTANCE=Indfor
 	{
-		waitUntil {!isNull player};
-		nul = [] execVM "briefing.sqf";
-		if (side player == west) then //Hides the markers named below so blufor can't see it on map. Edit the WEST for intended case. EAST=Opfor/RESISTANCE=Indfor
-		{
+		//hide marker
 		"MarkerName" setMarkerAlphaLocal 0;
-		};
 	};
 };
-
-//JIP
-if (!isServer && isNull player) then 
-{ 
-	waitUntil {!isNull player};
-	[]execvm "scripts\start_text\init.sqf";
-	nul= ["AreaOfOperations"]execvm "scripts\coverMap\coverMap.sqf";
-	nul = [] execVM "briefing.sqf";
-	if (hasInterface) then 
-	{
-	waitUntil {!isNull player};
-		if (side player == west) then //Hides the markers named below so blufor can't see it on map. Edit the WEST for intended case. EAST=Opfor/RESISTANCE=Indfor
-		{
-		"MarkerName" setMarkerAlphaLocal 0;
-		};
-	};
-}; 
-

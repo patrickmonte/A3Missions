@@ -351,7 +351,7 @@ _BRADHE = "bradleyhe" call BIS_fnc_getParamValue;
 			_unit addPrimaryWeaponItem _Optic;
 		 }; 
 
-		 		 case "AASL":
+		 case "AASL":
  		{
 			_unit forceAddUniform "rhs_uniform_g3_m81";
 			for "_i" from 1 to 6 do {_unit addItemToUniform "ACE_fieldDressing";};
@@ -414,53 +414,7 @@ _BRADHE = "bradleyhe" call BIS_fnc_getParamValue;
 			_unit addPrimaryWeaponItem _Optic;
 		 }; 
 
-					 case "SLRECON":
- 		{
-			_unit forceAddUniform "rhs_uniform_g3_m81";
-			for "_i" from 1 to 6 do {_unit addItemToUniform "ACE_fieldDressing";};
-			for "_i" from 1 to 2 do {_unit addItemToUniform "ace_Morphine";};
-			_unit addItemToUniform "ACE_EarPlugs";
-			for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
-			_unit addVest "rhsusf_iotv_ocp_Grenadier";
-			for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m67";};
-			for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
-			for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_red";};
-			for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
-			_unit addBackpack "tf_rt1523g_rhs";
-			for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
-			_unit addWeapon "rhs_weap_m4_carryhandle";
-			_unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-			_unit addHeadgear "rhs_Booniehat_m81";
-			_unit addWeapon "binocular";
-			_unit addGoggles "G_Bandanna_oli";
-			_unit linkItem "ItemGPS";
-			_unit addPrimaryWeaponItem _Optic;
-			
-		 }; 
-
-					  case "RIFLERECON":
- 		{
-			_unit forceAddUniform "rhs_uniform_g3_m81";
-			for "_i" from 1 to 6 do {_unit addItemToUniform "ACE_fieldDressing";};
-			_unit addItemToUniform "ace_Morphine";
-			_unit addItemToUniform "ACE_EarPlugs";
-			_unit addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";
-			_unit addVest "rhsusf_iotv_ocp_Rifleman";
-			for "_i" from 1 to 1 do {_unit addItemToVest "rhs_mag_m67";};
-			for "_i" from 1 to 1 do {_unit addItemToVest "rhs_mag_an_m8hc";};
-			for "_i" from 1 to 9 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
-			_unit addWeapon "rhs_weap_m4_carryhandle";
-			_unit addHeadgear "rhs_Booniehat_m81";
-			_unit addWeapon "binocular";
-			_unit addGoggles "G_Bandanna_oli";
-			_unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-			_unit addPrimaryWeaponItem _Optic;
-			
-		 }; 
-		 
-
-
-		 		 		 		 case "PILOT":
+		 case "PILOT":
  		{
 			_unit forceAddUniform "rhs_uniform_g3_m81";
 			for "_i" from 1 to 6 do {_unit addItemToUniform "ACE_fieldDressing";};

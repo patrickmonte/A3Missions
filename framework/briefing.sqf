@@ -1,9 +1,21 @@
 ﻿waitUntil {!isNull player};
+////////////////KAIKKI////////////////
+//JOS haluat että jokainen osapuoli näkee osan briiffistä yhtenäisesti, voit lisätä sen tähän. Muista kommentoida tai poistaa osapuolten osuus samasta pätkästä siinä tapauksessa!
+/*
+player createDiaryRecord ["Diary",["Yleistä","
+General
+<br/>
+Tekijä: Nimitähän
+<br/>
+"]];
+*/
+
+////////////////BLUFOR////////////////
 if (side player == west) then {
 player createDiaryRecord ["Diary",["Yleistä","
 General
 <br/>
-Tekijä Nimitähän
+Tekijä: Nimitähän
 <br/>
 "]];
 
@@ -36,11 +48,13 @@ player createDiaryRecord ["Diary",["Tilanne","
 Situation
 "]];
 };
+
+////////////////OPFOR////////////////
 if (side player == EAST) then {
 player createDiaryRecord ["Diary",["Yleistä","
 General
 <br/>
-Tekijä Nimitähän
+Tekijä: Nimitähän
 <br/>
 "]];
 
@@ -73,11 +87,13 @@ player createDiaryRecord ["Diary",["Tilanne","
 Situation
 "]];
 };
+
+////////////////INDFOR////////////////
 if (side player == RESISTANCE) then {
 player createDiaryRecord ["Diary",["Yleistä","
 General
 <br/>
-Tekijä Nimitähän
+Tekijä: Nimitähän
 <br/>
 "]];
 

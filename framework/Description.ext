@@ -1,17 +1,13 @@
-﻿
-class Header
-{
-	minPlayers = 1;//Min players of your mission
-	maxPlayers = 99;//Max players of your mission
-	gameType = Team;//Mission type, can be either Coop/Seize/Defend/Team/Unknown
-};
-
-author = "YourName"; //Your name here
+﻿author = "YourName"; //Your name here
 onLoadName = "MissionName";//Your mission name
 onLoadMission = "www.armafinland.fi";//Free to edit, don't make it too long as it only appears on loadscreen
 loadscreen="resources\loadscreen.jpg";//Image displayed while mission is loading. Not required.
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector. 
+minPlayerDistance = 50; //meters
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Params
 {
     class afi_safeStart_duration
@@ -22,12 +18,20 @@ class Params
             default = 5;
             code = "afi_safeStart_timer = %1";
     };
+	class Daytime
+	{
+		title = "Time";
+		texts[] = {"Morning","Day","Evening","Night"};
+		values[] = {6,12,18,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime"; // (Optional) [[Functions_Library_(Arma_3)|Function]] [[call]]ed when player joins, selected value is passed as an argument
+		isGlobal = 0; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	};
 };
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Don't delete anything below this point!!!
-respawnButton = 1;
 disabledAI = 0;
-respawn = 1;
 enableDebugConsole = 1;
 
 
