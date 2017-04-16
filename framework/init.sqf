@@ -44,4 +44,25 @@ if (hasInterface) then
 		//hide marker
 		"MarkerName" setMarkerAlphaLocal 0;
 	};
+
+
+	//pause screen for mission to load once in-game
+	[] spawn  
+	{
+	    finishMissionInit;
+        waitUntil{!isNull player && time > 0};
+        openMap [true, true];
+        _camera = "camera" camCreate [(getPos player select 0),(getPos player select 1),100];
+        _camera cameraEffect ["internal","back"];
+        _camera camSetFOV 0.700;
+        _camera camSetTarget player;
+        _camera camCommit 0;
+        waitUntil {camCommitted _camera};
+        cutText["Ladataan Tehtävää", "PLAIN", 5, true];
+        waitUntil {time > 15};
+        player cameraEffect ["terminate","back"];
+        camDestroy _camera;
+        cutText["", "BLACK IN", 5];
+        openMap [false, false];
+    };
 };
