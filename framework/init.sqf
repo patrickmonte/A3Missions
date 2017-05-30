@@ -39,11 +39,8 @@ if (hasInterface) then
 	[]execvm "scripts\start_text\init.sqf";
 	nul= ["AreaOfOperations"]execvm "scripts\coverMap\coverMap.sqf";
 	[] call compile preprocessFileLineNumbers "briefing.sqf";
-	if (side player == WEST) then //Hides the markers named below so blufor can't see it on map. Edit the WEST for intended case. EAST=Opfor/RESISTANCE=Indfor
-	{
-		//hide marker
-		"MarkerName" setMarkerAlphaLocal 0;
-	};
+	[]execvm "scripts\hidemarkers.sqf";
+	
 
 
 	//pause screen for mission to load once in-game
