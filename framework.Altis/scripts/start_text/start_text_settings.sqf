@@ -13,13 +13,9 @@
 
 _TITLE_West = "Framework Blufor";
 _TITLE_East = "Framework Opfor";
-_TITLE_Resistance = "Framework Resistance";
 
-
-_TEXT_West			= "Framework Text";
-_TEXT_East			= "Framework Text";
-_TEXT_Resistance	= "Framework Text";
-
+_TEXT_West	= "Framework Text";
+_TEXT_East	= "Framework Text";
 
 switch (side player) do { //Checks what team the player is on
 
@@ -30,6 +26,7 @@ switch (side player) do { //Checks what team the player is on
 			["TEXT", _TEXT_West],
 			["DATETIME"]
 		];
+
 	}; //End of west case
 
 	case east: { //If player is east he receives this message
@@ -39,14 +36,6 @@ switch (side player) do { //Checks what team the player is on
 			["TEXT", _TEXT_East],
 			["DATETIME"]
 		];
+
 	}; //End of east case
-	case resistance: { //If player is indfor he receives this message
-
-		_startTextArray = [
-			["TITLEQUOTE", _TITLE_Resistance],
-			["TEXT", _TEXT_Resistance],
-			["DATETIME"]
-		];
-	}; //End of indor case
-
 }; //End of switch

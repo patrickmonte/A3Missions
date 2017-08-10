@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=636;
+		nextID=640;
 	};
 	class MarkerIDProvider
 	{
@@ -16,29 +16,31 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16413.195,36.107445,16511.607};
-		dir[]={0.28282216,-0.41781652,-0.86345267};
-		up[]={0.13006203,0.90851122,-0.39707503};
-		aside[]={-0.95036298,-3.0487718e-007,-0.31129372};
+		pos[]={16413.775,35.403339,16509.416};
+		dir[]={0.26595703,-0.51004469,-0.81806594};
+		up[]={0.1576975,0.86012894,-0.48506379};
+		aside[]={-0.95104885,-5.80505e-007,-0.30919489};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Data_F_Exp_A_Virtual",
-	"A3_Ui_F",
 	"Desert",
+	"A3_Ui_F",
 	"ace_medical",
 	"ace_repair",
 	"ace_refuel",
 	"ace_rearm",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Modules_F_Curator_Misc",
+	"A3_Modules_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=10;
 		class Item0
 		{
 			className="A3_Data_F_Exp_A";
@@ -48,15 +50,15 @@ class AddonsMetaData
 		};
 		class Item1
 		{
+			className="Desert";
+			name="Desert";
+		};
+		class Item2
+		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item2
-		{
-			className="Desert";
-			name="Desert";
 		};
 		class Item3
 		{
@@ -90,6 +92,20 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -183,7 +199,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=84;
+		items=86;
 		class Item0
 		{
 			dataType="Logic";
@@ -7534,20 +7550,6 @@ class Mission
 		};
 		class Item66
 		{
-			dataType="Marker";
-			position[]={16250.344,0,16349.682};
-			name="AreaOfOperations";
-			markerType="RECTANGLE";
-			type="rectangle";
-			fillName="Border";
-			a=5000;
-			b=5000;
-			drawBorder=1;
-			id=609;
-			atlOffset=-20.555054;
-		};
-		class Item67
-		{
 			dataType="Comment";
 			class PositionInfo
 			{
@@ -7558,7 +7560,7 @@ class Mission
 			description="These are required for mission to pass. Add more if you intend to scale up the player size.";
 			id=611;
 		};
-		class Item68
+		class Item67
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7566,11 +7568,11 @@ class Mission
 				position[]={16292.434,17.950001,16351.29};
 			};
 			title="MapBorders";
-			description="Marker required for coverMap.sqf to crop the map to intended size and limit the area of mission.";
+			description="Change the size and location of trigger to change map borders.";
 			id=612;
 			atlOffset=-0.00013542175;
 		};
-		class Item69
+		class Item68
 		{
 			dataType="Marker";
 			position[]={12498.309,0,19534.238};
@@ -7580,7 +7582,7 @@ class Mission
 			id=613;
 			atlOffset=-48.079731;
 		};
-		class Item70
+		class Item69
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7593,7 +7595,7 @@ class Mission
 			id=614;
 			atlOffset=-0.00016403198;
 		};
-		class Item71
+		class Item70
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7605,7 +7607,7 @@ class Mission
 			id=618;
 			atlOffset=73.344551;
 		};
-		class Item72
+		class Item71
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7613,11 +7615,11 @@ class Mission
 				position[]={16489.979,0,14598.888};
 			};
 			title="Missions under heavy load";
-			description="If your mission has more than 50+ players, remember to enable Garbage Collection while making the mission. It can be found under Atributes->Multiplayer->Garbage Collection";
+			description="If your  CO-OP mission has more than 50+ players, remember to enable Garbage Collection while making the mission. It can be found under Atributes->Multiplayer->Garbage Collection";
 			id=619;
 			atlOffset=56.1647;
 		};
-		class Item73
+		class Item72
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7629,7 +7631,7 @@ class Mission
 			id=620;
 			atlOffset=52.739948;
 		};
-		class Item74
+		class Item73
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -7682,7 +7684,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item75
+		class Item74
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7694,7 +7696,7 @@ class Mission
 			description="There is no need to change these. Make sure that playable units are able to use only the basic medical settings.";
 			id=622;
 		};
-		class Item76
+		class Item75
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -7880,7 +7882,7 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item77
+		class Item76
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -7911,10 +7913,29 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ACE_moduleRefuelSettings_hoseLength";
+					expression="_this setVariable ['hoseLength',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=12;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
-		class Item78
+		class Item77
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -7944,10 +7965,29 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ACE_moduleRearmSettings_supply";
+					expression="_this setVariable ['supply',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
-		class Item79
+		class Item78
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7960,7 +8000,7 @@ class Mission
 			id=626;
 			atlOffset=-8.7738037e-005;
 		};
-		class Item80
+		class Item79
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8013,7 +8053,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item81
+		class Item80
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8066,7 +8106,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item82
+		class Item81
 		{
 			dataType="Group";
 			side="West";
@@ -8078,7 +8118,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16414.629,32.863247,16505.967};
+						position[]={16494.016,37.771591,16543.012};
 					};
 					side="West";
 					flags=7;
@@ -8088,24 +8128,93 @@ class Mission
 					};
 					id=632;
 					type="B_Soldier_A_F";
-					atlOffset=0.00012588501;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=631;
-			atlOffset=0.00012588501;
+		};
+		class Item82
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={16694.885,33.214108,16793.203};
+				angles[]={6.2192731,0,0.18196407};
+			};
+			title="Group naming";
+			description="Name groups by inserting next code to group-leader's Init field and changing the number and letter accordingly: ie. for A1 Squad Leader@A1";
+			id=636;
 		};
 		class Item83
 		{
-			dataType="Marker";
-			position[]={14757.206,0,16457.93};
-			name="MarkerName";
-			text="Invisible marker";
-			type="mil_warning";
-			id=635;
-			atlOffset=-17.879999;
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16447.348,37.328869,16533.918};
+				angles[]={0,1.6578306,0};
+			};
+			areaSize[]={500,-1,500};
+			areaIsRectangle=1;
+			flags=1;
+			id=637;
+			type="ModuleCoverMap_F";
+			atlOffset=1.3144836;
+		};
+		class Item84
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16531.08,37.93454,16525.998};
+			};
+			id=638;
+			type="LocationArea_F";
+		};
+		class Item85
+		{
+			dataType="Trigger";
+			position[]={16243.01,23.181423,16337.829};
+			class Attributes
+			{
+				sizeA=5000;
+				sizeB=5000;
+				isRectangle=1;
+			};
+			id=639;
+			type="EmptyDetector";
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=2;
+		};
+		class Links
+		{
+			items=2;
+			class Item0
+			{
+				linkID=0;
+				item0=637;
+				item1=638;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=638;
+				item1=639;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
 		};
 	};
 };

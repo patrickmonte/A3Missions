@@ -5,7 +5,7 @@ loadscreen="resources\loadscreen.jpg";//Image displayed while mission is loading
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector. 
-//minPlayerDistance = 50; //meters
+minPlayerDistance = 50; //meters
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class Params
@@ -33,7 +33,8 @@ class Params
 //Don't delete anything below this point!!!
 disabledAI = 0;
 enableDebugConsole = 1;
-
+enableTargetDebug = 1;
+respawn = 1;
 
 
 
